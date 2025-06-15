@@ -1,0 +1,9 @@
+fastapi==0.115.0
+uvicorn==0.30.6
+requests==2.32.3
+beautifulsoup4==4.12.3
+chromadb==0.5.3
+openai==1.46.0
+python-multipart==0.0.9
+pillow==10.4.0
+pytesseract==0.3.13
