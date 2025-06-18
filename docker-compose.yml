@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  tds-virtual-ta:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DISCOURSE_USERNAME=${DISCOURSE_USERNAME}
+      - DISCOURSE_PASSWORD=${DISCOURSE_PASSWORD}
+      - HOST=0.0.0.0
+      - PORT=8000
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

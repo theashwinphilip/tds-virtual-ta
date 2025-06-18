@@ -1,0 +1,31 @@
+Python
+
+venv/ *.pyc pycache/ *.pyo *.pyd .Python env/ build/ dist/ *.egg-info/ .pip_cache/ .pytest_cache/
+
+Environment variables
+
+.env
+
+Data files
+
+data/*.json data/
+
+IDE and editor files
+
+.vscode/ .idea/ *.sublime-project *.sublime-workspace
+
+OS files
+
+.DS_Store Thumbs.db
+
+Docker
+
+docker-compose.override.yml *.log
+
+Temporary files
+
+*.bak *.swp *~
+
+Node.js (for Promptfoo)
+
+node_modules/ npm-debug.log
